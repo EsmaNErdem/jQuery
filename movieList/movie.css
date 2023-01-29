@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 45px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    row-gap: 10px;
+}
+table{
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+#delete-button {
+    padding: 5px 10px;
+    background-color: blueviolet;
+    color: white;
+}
+
+#delete-button:hover{
+    cursor: pointer;
+}
+
+th {
+    cursor: pointer;
+}
+
+.sort {
+    text-decoration: underline;
+}
