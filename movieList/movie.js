@@ -17,7 +17,7 @@ $(function(){
         list.push(movieObj);
 
     })
-
+//need remove the movie from the list array as well.
     $("tbody").on("click", "#delete-button", function(event){
         $(event.target).parent().parent().remove()
     })
@@ -42,6 +42,7 @@ $("#sort-name").on('click', function(e){
     $("tbody").append(createList(val, newList[0].rating));
     })
 })
+
 $("#sort-rating").on('click', function(e){
    
     //adding underline to indicate that it is sorted by this catagory
@@ -50,7 +51,7 @@ $("#sort-rating").on('click', function(e){
     $("tbody").empty();
     //sorting the list
     let sorted = list.sort(
-        (p1, p2) => (p1.rating < p2.rating) ? 1 : (p1.rating > p2.rating) ? -1 : 0);
+        (p1, p2) => (+p1.rating < +p2.rating) ? 1 : (+p1.rating > +p2.rating) ? -1 : 0);
     console.log(sorted)
     //going thorugh sorted list and appendign them
     sorted.forEach(function(val){
